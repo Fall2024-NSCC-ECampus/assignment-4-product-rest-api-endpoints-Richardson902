@@ -1,5 +1,6 @@
 package org.example.productrestapiapplication.service;
 
+import org.example.productrestapiapplication.exception.NotFound;
 import org.example.productrestapiapplication.model.Product;
 import org.example.productrestapiapplication.payload.ProductRequest;
 import org.example.productrestapiapplication.repository.ProductRepository;
@@ -28,7 +29,7 @@ public class ProductService {
 
     public Product getProductById(Long id) {
         return productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found with id " + id));
+                .orElseThrow(() -> new NotFound("Product not found with id " + id));
     }
 
     public Product updateProduct(Long id, ProductRequest request) {
