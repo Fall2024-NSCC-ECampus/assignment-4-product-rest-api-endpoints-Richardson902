@@ -1,1 +1,39 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/C1QIoMg2)
+# Product REST API Application
+
+This is a Spring Boot application that provides a RESTful API for managing products. The application allows you to create, read, update, and delete products.
+
+## Technologies
+
+- Java
+- Spring Boot
+- Spring Data JPA
+- MySQL
+- Maven
+ 
+## API Endpoints
+
+### Product Endpoints
+
+- **GET /api/v1/product:** Get all products
+- **GET /api/v1/product/{id}:** Get a product by ID
+- **POST /api/v1/product:** Create a new product
+- **PUT /api/v1/product/{id}:** Update a product by ID
+- **DELETE /api/v1/product/{id}:** Delete a product by ID
+
+### Example Request
+
+Add a New Product
+
+- **URL**: http://localhost:8080/api/v1/product
+- **Method**: POST
+- **Headers**: Content-Type: application/json
+- **Body**:
+    ```json
+    {
+        "name": "Product 1",
+        "price": 100.00,
+        "quantity": 10
+    }
+    ```
+
+
